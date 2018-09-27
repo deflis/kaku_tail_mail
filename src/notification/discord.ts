@@ -1,12 +1,11 @@
 import { Notification } from './notification';
 import IData from '../model/data';
-
-const url = "****"
+import Config from '../../config.yml'
 
 export default class Discord implements Notification {
     private webhook(content: string) {
         Logger.log(`Discordに通知します [${content}]`)
-        UrlFetchApp.fetch(url, {
+        UrlFetchApp.fetch(Config.DISCORD.WEBHOOK, {
                 "method": "post",
                 "headers": {"Content-Type": "application/json"},
                 "payload": JSON.stringify({content})

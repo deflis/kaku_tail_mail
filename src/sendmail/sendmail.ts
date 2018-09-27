@@ -24,14 +24,9 @@ export default class SendMail {
     }
 }
 
-export interface MailTemplate {
-    body(params: MailParams): string
-    htmlBody(params: MailParams): string
-}
-
-class MailTemplateImpl implements MailTemplate {
-    html: string;
-    text: string;
+export class MailTemplate {
+    private html: string;
+    private text: string;
     constructor(html: string, text: string) {
         this.html = html
         this.text = text
@@ -47,11 +42,7 @@ class MailTemplateImpl implements MailTemplate {
 
 }
 
-import text from "./mail.txt"
-import html from "./mail.html"
 import IData from '../model/data';
-
-export const MailTemplate: MailTemplate = new MailTemplateImpl(html, text)
 
 export interface MailParams extends IData {}
 

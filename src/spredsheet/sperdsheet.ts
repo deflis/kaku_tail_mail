@@ -1,8 +1,5 @@
 import IData from '../model/data';
-
-const columnEmail = 2
-const columnName = 3
-const columnCounter = 10
+import Config from '../../config.yml'
 
 export class Spreadsheet {
 
@@ -38,15 +35,15 @@ export class Spreadsheet {
 
 
     public countUp() {
-        const count = this.getValueByRowAndColumn<number>(this.lastRow - 1, columnCounter) + 1;
-        this.setValueByRowAndColumn(this.lastRow, columnCounter, count);
+        const count = this.getValueByRowAndColumn<number>(this.lastRow - 1, Config.SPREADSHEET.COLUMN.COUNTER) + 1;
+        this.setValueByRowAndColumn(this.lastRow, Config.SPREADSHEET.COLUMN.COUNTER, count);
     }
 
     public getValue(): IData {
         return {
-            email: this.getLastRowValue(columnEmail),
-            name: this.getLastRowValue(columnName),
-            count: this.getLastRowValue(columnCounter),
+            email: this.getLastRowValue(Config.SPREADSHEET.COLUMN.MAIL),
+            name: this.getLastRowValue(Config.SPREADSHEET.COLUMN.NAME),
+            count: this.getLastRowValue(Config.SPREADSHEET.COLUMN.COUNTER),
         }
     }
 }

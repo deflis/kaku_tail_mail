@@ -1,0 +1,27 @@
+MAIL:
+  ADDRESS: test@example.com
+  SUBJECT: タイトル
+  BODY:
+    TEXT: |
+      {{{ name }}} 様
+
+      この度は、 _イベント名_ にお申し込みいただき、ありがとうございました。
+
+      参加番号： {{{ count }}}
+
+      引き続きよろしくお願いします。
+    HTML: >-
+      {{ name }} 様<br>
+      <br>
+      この度は、 _イベント名_ にお申し込みいただき、ありがとうございました。<br>
+      <br>
+      参加番号： {{ count }}<br>
+      <br>
+      引き続きよろしくお願いします。
+SPREADSHEET:
+  COLUMN:
+      NAME: 2
+      MAIL: 3
+      COUNTER: 10
+DISCORD:
+    WEBHOOK: URLを設定してください

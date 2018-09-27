@@ -33,6 +33,14 @@ module.exports = {
         use: {
           loader: 'raw-loader',
         }
+      },
+      {
+        test: /\.yml$/,
+        use: [{
+          loader: 'json-loader',
+        }, {
+          loader: 'yaml-loader',
+        }]
       }
     ]
   },

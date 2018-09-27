@@ -2,6 +2,12 @@ node_modules
 build
 tsc
 
+config.yml
+mail.txt
+mail.html
+
+.clasp.json
+
 # Logs
 logs
 *.log

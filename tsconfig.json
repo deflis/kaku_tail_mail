@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "es2015", // TSはECMAScript 5に変換
+    "module": "es2015", // TSのモジュールはES Modulesとして出力
+    "outDir": "./tsc",
+    "rootDir": "./src",
+
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "pretty": true,
+    "strictNullChecks": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.3",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.0.0-rc.3",
+    "@babel/preset-typescript": "^7.0.0-rc.3",
+    "@google/clasp": "^1.5.3",
+    "@types/google-apps-script": "^0.0.27",
+    "@types/mustache": "^0.8.31",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-gas": "^2.0.2",
+    "gas-webpack-plugin": "^0.3.0",
+    "raw-loader": "^0.5.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.0.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "publish": "clasp push"
+  },
+  "name": "kakutail-mail",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "author": "deflis <deflis@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "html-loader": "^0.5.5",
+    "mustache": "^3.0.0"
+  }
+}

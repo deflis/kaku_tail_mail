@@ -1,0 +1,14 @@
+{
+    "presets": [
+        "@babel/typescript",
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "entry",
+            "forceAllTransforms": true
+          }
+        ],
+        "gas"
+    ],
+    "plugins": ["transform-class-properties"]
+}

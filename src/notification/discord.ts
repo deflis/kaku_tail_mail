@@ -15,6 +15,6 @@ export default class Discord implements Notification {
     }
 
     notification(data: IData) {
-        this.webhook(`[${data.count}] ${data.email} さんが参加を表明しました`)
+        this.webhook(`[${data.count}] ${data.name} さんが参加を表明しました`)
     }
 }

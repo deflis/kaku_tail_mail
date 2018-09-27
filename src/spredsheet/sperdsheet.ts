@@ -1,7 +1,8 @@
 import IData from '../model/data';
 
-const columnEmail = 1;
-const columnCounter = 10;
+const columnEmail = 2
+const columnName = 3
+const columnCounter = 10
 
 export class Spreadsheet {
 
@@ -44,6 +45,7 @@ export class Spreadsheet {
     public getValue(): IData {
         return {
             email: this.getLastRowValue(columnEmail),
+            name: this.getLastRowValue(columnName),
             count: this.getLastRowValue(columnCounter),
         }
     }

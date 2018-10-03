@@ -5,6 +5,7 @@ import { MailTemplate } from '../sendmail/sendmail';
 import { Notification } from '../notification/notification';
 import Discord from '../notification/discord';
 import Config from '../../config.yml'
+import Log from '../logger';
 
 export class FormMailSender implements IExecutor {
     name = "FormMailSender"
@@ -16,7 +17,11 @@ export class FormMailSender implements IExecutor {
         spreadSheet.countUp()
         const value = spreadSheet.getValue()
 
-        this.sendmail.send(value.email, value)
-        this.discordNotification.notification(value)
+        try {
+            this.sendmail.send(value.email, value)
+            this.discordNotification.notification(value)
+        } catch(ex) {
+            Log.error(`処理中にエラーが発生`, value, ex)
+        }
     }
 }
